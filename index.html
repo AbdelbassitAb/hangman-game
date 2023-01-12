@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div class="game-over">
+        <div class="content">
+            <div class="you"></div>
+            <div class="the-word-is"></div>
+            <button>
+                Replay
+            </button>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                Hangman
+            </div>
+
+            <div class="errors">
+                Errors :
+                <span></span>
+
+            </div>
+
+            <div class="category">
+                Word from
+                <span></span>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="game">
+            <div class="draw-box">
+                <div class="draw">
+                    <div class="base"></div>
+                    <div class="stand"></div>
+                    <div class="top-thing"></div>
+                    <div class="top-thing2"></div>
+                    <div class="hbal"></div>
+                    <div class="man">
+                        <div class="head"></div>
+                        <div class="body"></div>
+                        <div class="hands"></div>
+                        <div class="feet"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="letters"></div>
+        </div>
+
+        <hr>
+
+        <div class="word">
+
+            <audio src="./sounds/correct.mp3" class="correct-sound"></audio>
+            <audio src="./sounds/error.mp3" class="error-sound"></audio>
+
+        </div>
+
+
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 5%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .title {
+  font-size: 22px;
+}
+
+.category {
+  font-size: 22px;
+}
+
+.category span {
+  font-size: 22px;
+  color: red;
+}
+
+.errors {
+  font-size: 22px;
+}
+
+.errors span {
+  font-size: 22px;
+  color: red;
+}
+
+.game {
+  display: flex;
+
+  height: 400px;
+}
+
+.game .draw-box {
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  position: relative;
+  flex: 1;
+}
+
+.draw {
+  position: relative;
+  margin-left: 30%;
+}
+
+.draw .base {
+  width: 50px;
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  bottom: 50px;
+  left: -25px;
+  display: none;
+}
+
+.draw .stand {
+  width: 4px;
+  height: 270px;
+  background-color: black;
+  position: absolute;
+  bottom: 50px;
+  display: none;
+}
+
+.draw .top-thing {
+  width: 150px;
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  bottom: 300px;
+  display: none;
+}
+
+.draw .top-thing2 {
+  width: 4px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  bottom: 264px;
+  left: 150px;
+  display: none;
+}
+
+.draw .hbal {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 4px dashed black;
+  position: absolute;
+  bottom: 194px;
+  left: 115px;
+  display: none;
+}
+
+.draw .man .head {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid black;
+  position: absolute;
+  bottom: 198px;
+  left: 125px;
+  display: none;
+}
+
+.draw .man .body {
+  width: 4px;
+  height: 80px;
+  background-color: black;
+  position: absolute;
+  bottom: 118px;
+  left: 148px;
+  display: none;
+}
+
+.draw .man .hands {
+  display: none;
+}
+
+.draw .man .hands:before {
+  content: "";
+  width: 4px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  bottom: 148px;
+  left: 139px;
+  transform: rotate(30deg);
+}
+
+.draw .man .hands:after {
+  content: "";
+  width: 4px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  bottom: 148px;
+  left: 159px;
+  transform: rotate(-30deg);
+}
+
+.draw .man .feet {
+  display: none;
+}
+
+.draw .man .feet:before {
+  content: "";
+  width: 4px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  bottom: 82px;
+  left: 139px;
+  transform: rotate(30deg);
+}
+
+.draw .man .feet:after {
+  content: "";
+  width: 4px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  bottom: 82px;
+  left: 159px;
+  transform: rotate(-30deg);
+}
+
+.game .letters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.letters .letter-box {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(20, 115, 20);
+  color: white;
+  line-height: 60px;
+  font-size: 28px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
+.word {
+  padding: 10px;
+  display: flex;
+  background-color: rgb(240, 240, 240);
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.word .no-space {
+  height: 60px;
+  width: 60px;
+  border-bottom: 4px solid rgb(20, 115, 20);
+  background-color: white;
+  color: black;
+  line-height: 60px;
+  font-size: 28px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
+.word .space {
+  height: 60px;
+  width: 60px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.word span.space::before {
+  content: "";
+  width: 20px;
+  height: 4px;
+  background-color: rgb(20, 115, 20);
+}
+
+.game-over {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: none;
+}
+
+.game-over .content {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: white;
+  height: 50%;
+  width: 70%;
+  left: 15%;
+  top: 20%;
+  border-radius: 20px;
+}
+
+.game-over .content .the-word-is {
+  color: black;
+}
+
+.game-over .content button {
+  background-color: white;
+  border: none;
+  font-size: 22px;
+  border-radius: 10px;
+  padding: 10px 50px;
+  margin-top: 80px;
+}
